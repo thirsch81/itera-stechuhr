@@ -27,11 +27,13 @@ class ProjectileUserTest {
 	
 	
 	@Test
-	public void testGetPojects() {
+	public void testGetProjects() {
 		
 		user.openProjectileAndLogIn "thhi", "!start01"
 				
-		user.getProjectList()
+		user.getProjects().each {
+			println it
+		}
 	}
 	
 }

@@ -39,16 +39,16 @@ class ProjectileUser {
 		List<WebElement> tableRows = driver.findElements TABLE_ROW_PROJECT
 		List<ProjectileProject> result = []
 		tableRows.each { row ->
-			List<WebElement> cells = row.findElements By.cssSelector("td")
+			List<String> cells = row.findElements(By.cssSelector("td")).collect { it.text }
 			result.add new ProjectileProject(
-					mainProject: cells[0].text,
-					id: cells[1].text,
-					name: cells[2].text,
-					workPackage: cells[3].text,
-					client: cells[4].text,
-					deadline: cells[5].text,
-					plannedEffort: cells[6].text,
-					currentEffort: cells[7].text
+					mainProject: cells[0],
+					id: cells[2],
+					name: cells[4],
+					workPackage: cells[6],
+					client: cells[8],
+					deadline: cells[10],
+					plannedEffort: cells[12],
+					currentEffort: cells[14]
 					)
 		}
 		result
