@@ -1,13 +1,10 @@
-package de.iteratec.stechuhr.projectile.test
+package de.iteratec.stechuhr.projectile
 
 import static org.junit.Assert.*
 
 import org.junit.Before
 import org.junit.Test
 import org.openqa.selenium.By
-
-import de.iteratec.stechuhr.projectile.ProjectileBooking
-import de.iteratec.stechuhr.projectile.ProjectileUser
 
 class ProjectileUserTest {
 
