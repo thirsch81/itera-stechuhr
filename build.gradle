@@ -3,26 +3,20 @@ apply plugin: "java"
 apply plugin: "groovy"
 apply plugin: "eclipse"
 
+group = "de.iteratec"
+version = "0.5.0"
+
 repositories {
 	flatDir { dirs "lib" }
 	mavenCentral()
 }
 
-group = "de.iteratec"
-version = "0.5.0"
-
 dependencies {
 	compile "org.codehaus.groovy:groovy-all:2.1.7"
-	compile("org.seleniumhq.selenium:selenium-java:2.35.0") {
-		exclude module: "selenium-firefox-driver"
-		exclude module: "selenium-chrome-driver"
-		exclude module: "selenium-ie-driver"
-		exclude module: "selenium-android-driver"
-		exclude module: "selenium-iphone-driver"
-		exclude module: "selenium-safari-driver"
-	}
+	compile "org.seleniumhq.selenium:selenium-htmlunit-driver:2.35.0"
 	compile "org.seleniumhq.selenium:selenium-support:2.35.0"
 	compile ":groovy-webdriver:0.5.0"
+
 	testCompile "junit:junit:4.11"
 }
 
