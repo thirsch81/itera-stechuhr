@@ -1,0 +1,13 @@
+.svn
+.classpath
+*.iml
+*.iws
+*.ipr
+.gradle
+*.log
+build
+.settings
+out
+bin
+results
+test-output
