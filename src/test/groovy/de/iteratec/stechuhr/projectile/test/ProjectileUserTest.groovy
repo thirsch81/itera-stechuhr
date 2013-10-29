@@ -21,7 +21,7 @@ class ProjectileUserTest {
 	@Test
 	public void testLogin() {
 
-		user.openProjectileAndLogIn "thhi", "!start01"
+		user.openProjectileAndLogIn "thhi", "dontwork"
 
 		assertTrue user.driver.isElementVisible(By.cssSelector("td[bgcolor='#dddddd']"))
 	}
@@ -29,7 +29,7 @@ class ProjectileUserTest {
 	@Test
 	public void testGetProjectOptionNames() {
 
-		assertTrue user.getProjectOptionNames("thhi", "!start01").size() > 0
+		assertTrue user.getProjectOptionNames("thhi", "dontwork").size() > 0
 	}
 
 	@Test
@@ -37,6 +37,6 @@ class ProjectileUserTest {
 
 		ProjectileBooking booking = new ProjectileBooking(projectOptionName: "_INT-Temporär-2013 - PARKPOSITION", startTime: "10:30", endTime: "11:35", comment: "blablubb")
 
-		user.makeBooking "thhi", "!start01", booking
+		user.makeBooking "thhi", "dontwork", booking
 	}
 }

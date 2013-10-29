@@ -5,7 +5,7 @@ class ProjectileProject {
 	String mainProject
 	String id
 	String name
-	String workPackage // -> LEO
+	String workPackage
 	String client
 	String deadline
 
@@ -20,6 +20,4 @@ class ProjectileProject {
 	public String toString() {
 		"ProjectileProject [mainProject=$mainProject, id=$id, name=$name, workPackage=$workPackage, client=$client, deadline=$deadline, plannedEffort=$plannedEffort, currentEffort=$currentEffort]"
 	}
-
-
 }
